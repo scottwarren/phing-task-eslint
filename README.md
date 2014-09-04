@@ -39,4 +39,4 @@ _There are no required attributes._
 
 ====================
 
-Thanks to @martinj for the JSHint task that this is based from
+Thanks to [@martinj](https://github.com/martinj/phing-task-jshint) for the JSHint task that this is based from
