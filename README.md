@@ -1,6 +1,6 @@
-# JSHint Phing Task
+# ESLint Phing Task
 
-This project is a [Phing](http://phing.info) build tool task for running [node-jshint](https://github.com/jshint/node-jshint)
+This project is a [Phing](http://phing.info) build tool task for running [eslint](https://www.github.com/eslint/eslint)
 
 ## Example
 
@@ -12,15 +12,15 @@ To use this task, add the classpath where you placed the JsHintTask.php in your 
 
 Then include it with a taskdef tag in your build.xml file:
 
-	<taskdef name="jshint" classname="JsHintTask">
+	<taskdef name="eslint" classname="ESLintTask">
 		<classpath refid="project.class.path"/>
 	</taskdef>
 
 
 You can now use the task
 
-	<target name="jshint" description="Javascript Lint">
-		<jshint haltonfailure="true" config="${basedir}/jshint-config.json">
+	<target name="eslint" description="Javascript Lint">
+		<jshint haltonfailure="true" config="${basedir}/.eslintrc">
 			<fileset dir="${basedir}/js">
 				<include name="**/*.js"/>
 			</fileset>
@@ -33,8 +33,10 @@ You can now use the task
 _There are no required attributes._
 
 #### Optional
- - **config** - Specifies the jshint config file.
- - **executable** - Path to jshint command.
+ - **config** - Specifies the eslint config file.
+ - **executable** - Path to eslint command.
  - **haltonfailure** - If the build should fail if any lint warnings is found.
- - **cachefile** - puts last-modified times to a file and does not check them if not changed
 
+====================
+
+Thanks to @martinj for the JSHint task that this is based from
